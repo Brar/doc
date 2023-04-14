@@ -3,33 +3,36 @@
     {
       "src": [
         {
-          "files": [ "src/**/*.csproj" ],
-          "exclude": [ "src/MSI/**", "src/VSIX/**", "**/bin/**", "**/obj/**" ],
-          "cwd": "Npgsql/"
+          "files": [
+            "Npgsql/src/Npgsql/bin/Release/net7.0/Npgsql.dll",
+            "Npgsql/src/Npgsql.DependencyInjection/bin/Release/netstandard2.0/Npgsql.DependencyInjection.dll",
+            "Npgsql/src/Npgsql.Json.NET/bin/Release/netstandard2.0/Npgsql.Json.NET.dll",
+            "Npgsql/src/Npgsql.OpenTelemetry/bin/Release/netstandard2.0/Npgsql.OpenTelemetry.dll",
+            "Npgsql/src/Npgsql.NodaTime/bin/Release/net6.0/Npgsql.NodaTime.dll",
+            "Npgsql/src/Npgsql.GeoJSON/bin/Release/netstandard2.0/Npgsql.GeoJSON.dll",
+            "Npgsql/src/Npgsql.NetTopologySuite/bin/Release/netstandard2.0/Npgsql.NetTopologySuite.dll"
+          ]
         }
       ],
-      "dest": "obj/api/Npgsql",
-      "properties": {
-        "TargetFramework": "netstandard2.1"
-      }
+      "dest": "obj/api/Npgsql"
     },
     {
       "src": [
         {
-          "files": [ "src/**/*.csproj" ],
-          "exclude": [ "**/bin/**", "**/obj/**", "Properties/NpgsqlStrings.*" ],
-          "cwd": "EFCore.PG"
+          "files": [
+            "efcore.pg/src/EFCore.PG/bin/Release/net7.0/Npgsql.EntityFrameworkCore.PostgreSQL.dll",
+            "efcore.pg/src/EFCore.PG.NodaTime/bin/Release/net6.0/Npgsql.EntityFrameworkCore.PostgreSQL.NodaTime.dll",
+            "efcore.pg/src/EFCore.PG.NTS/bin/Release/net6.0/Npgsql.EntityFrameworkCore.PostgreSQL.NetTopologySuite.dll"
+          ]
         }
       ],
-      "dest": "obj/api/EFCore.PG",
-      "properties": {
-        "TargetFramework": "net6.0"
-      }
+      "dest": "obj/api/EFCore.PG"
     }
   ],
   "build": {
     "template": [
         "default",
+        "modern",
         "template"
     ],
     "content": [

@@ -1,6 +1,5 @@
 ---
-layout: doc
-title: Documentation
+title: Getting Started
 ---
 
 [![stable](https://img.shields.io/nuget/v/Npgsql.svg?label=stable)](https://www.nuget.org/packages/Npgsql/)
